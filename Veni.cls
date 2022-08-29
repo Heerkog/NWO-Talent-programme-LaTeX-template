@@ -73,12 +73,13 @@ BoldItalicFont=Carlito-BoldItalic.ttf,
         \Huge\color{nwotext}\thetitle~\theapplicationyear\par
         \vskip 6pt
         \LARGE\color{nwotext}\thesubtitle\par
-        \vskip 0.8cm
-        \normalsize\color{black}\textbf{\thedomain}\par
+        \vskip 0.4cm
+        \normalsize\color{black}{\thedomain}\par
+        \vskip 0.2cm
         \normalsize\color{black}\textit{Form Version: \theversion}\par
         
         \begin{tikzpicture}[overlay, remember picture]
-            \node[anchor=north east,inner sep=0pt,xshift=-2.5cm,yshift=-2.5cm] at (current page.north east) {\includegraphics[width=2.09cm,height=3.38cm]{NWO.jpg}};
+            \node[anchor=north east,inner sep=0pt,xshift=-2.5cm,yshift=-2.6cm] at (current page.north east) {\includegraphics[width=2.09cm,height=3.38cm]{NWO.jpg}};
         \end{tikzpicture}
     }
 }
