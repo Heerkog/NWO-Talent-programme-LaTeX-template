@@ -12,17 +12,17 @@
 \usepackage{fontspec}
  
 \setmainfont[
-BoldFont=CalibriBold.ttf,
-ItalicFont=CalibriItalic.ttf,
-BoldItalicFont=CalibriBoldItalic.ttf,
-]{CalibriRegular.ttf}
+BoldFont=Carlito-Bold.ttf,
+ItalicFont=Carlito-Italic.ttf,
+BoldItalicFont=Carlito-BoldItalic.ttf,
+]{Carlito-Regular.ttf}
 \defaultfontfeatures{Scale=MatchUppercase}
 
 \usepackage{unicode-math}
 \unimathsetup{math-style=TeX}
 \setmathfont{latinmodern-math.otf}
-\setmathfont[range=up/{num,latin,Latin}]{CalibriRegular.ttf}
-\setmathfont[range=it/{num,latin,Latin}]{CalibriItalic.ttf}
+\setmathfont[range=up/{num,latin,Latin}]{Carlito-Regular.ttf}
+\setmathfont[range=it/{num,latin,Latin}]{Carlito-Italic.ttf}
 \setmathfont[range={"2212,"002B,"003D,"0028,"0029,"005B,"005D,"221A,"2211,"2248,"222B,"007C,"2026,"2202,"00D7,"0302,"2261,"0025,"22C5,"00B1,"2194,"21D4}]{latinmodern-math.otf}
 
 \setoperatorfont\normalfont % For log, sin, cos, etc.
@@ -73,12 +73,13 @@ BoldItalicFont=CalibriBoldItalic.ttf,
         \Huge\color{nwotext}\thetitle~\theapplicationyear\par
         \vskip 6pt
         \LARGE\color{nwotext}\thesubtitle\par
-        \vskip 0.8cm
-        \normalsize\color{black}\textbf{\thedomain}\par
+        \vskip 0.4cm
+        \normalsize\color{black}{\thedomain}\par
+        \vskip 0.2cm
         \normalsize\color{black}\textit{Form Version: \theversion}\par
         
         \begin{tikzpicture}[overlay, remember picture]
-            \node[anchor=north east,inner sep=0pt,xshift=-2.5cm,yshift=-2.5cm] at (current page.north east) {\includegraphics[width=2.09cm,height=3.38cm]{NWO.jpg}};
+            \node[anchor=north east,inner sep=0pt,xshift=-2.5cm,yshift=-2.6cm] at (current page.north east) {\includegraphics[width=2.09cm,height=3.38cm]{NWO.jpg}};
         \end{tikzpicture}
     }
 }
