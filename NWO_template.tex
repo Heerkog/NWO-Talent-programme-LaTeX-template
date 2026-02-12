@@ -1,4 +1,4 @@
-\documentclass[9.5pt]{Veni}
+\documentclass[9.5pt,instructions]{Veni}
 
 %solve any problems with hyphenation as below
 \hyphenation{Zea-land}
@@ -16,19 +16,29 @@
 Social Sciences and Humanities\\
 Science\\
 Health Research and Development}
-\applicationyear{2022}
-\formversion{July 2022}
+\applicationyear{2025}
+\formversion{January 2026}
+
+%% Include all the template instructions
+\input{instructions.tex}
 
 
 \begin{document}
 \makenwotitle
 
+\guidelines
+
+\newpage
+\tableofcontents
+\newpage
+
+
 \input{1_general_information} % input without clear page
 \include{2_research_proposal}
 \include{3_budget}
-\include{4_curriculum_vitae}
-\include{5_administrative_details}
-\include{6_statements_by_applicant}
+\include{5_datamanagement}
+\include{6_personalinfo}
+
 
 \end{document}
 

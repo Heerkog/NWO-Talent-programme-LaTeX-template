@@ -3,7 +3,6 @@
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 
-
 \ProcessOptions
 
 \LoadClass{article}
@@ -319,5 +318,36 @@ natbib=true]{biblatex}
 
 %======================custom=========================
 \newcommand{\ts}{\textsuperscript}
+
+
+%====================== NWO instructions==================
+\RequirePackage{etoolbox}
+
+\newtoggle{showinstructions}
+\togglefalse{showinstructions}  % default: off
+
+\DeclareOption{instructions}{\toggletrue{showinstructions}}
+\ProcessOptions\relax
+
+\newcommand{\instructions}[2]{%
+  \iftoggle{showinstructions}{%
+  	\begin{mdframed}
+    		\mdheader{#1}
+    		#2
+		\end{mdframed}
+  }{}%
+}
+
+
+
+%======================Table of contents==================
+\renewcommand\tableofcontents{%
+  \section*{Table of Contents}  % or \chapter* for book/report classes
+  \@starttoc{toc}%
+}
+
+
+
+
 
 \endinput
